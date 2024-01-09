@@ -48,7 +48,7 @@ else:
 #Продовжуємо писати практики з заняття.
 """Написати fizzbuzz для 20 комплектів по три числа, які записані в файл. 
 Читайте із файлу перший рядок з трьома числами, беріть із нього числа, рахуйте для них fizzbuzz, виводите, продовжуйте з наступним рядком і так до кінця файла."""
-file_input = "fizzbazzinput3.txt"
+file_input = "fizzbuzzinput3.txt"
 file_reading = open (file_input,"r")
 for line in file_reading:
     fizz, buzz, num = map(int, line.split(","))
@@ -66,8 +66,8 @@ for line in file_reading:
     print()
 file_reading.close()
 #Переробити другу задачу так, щоб результат писався в інший файл. Додаємо list comprehension, map та інші свіжеотримані знання до виконання завдання.
-file_input = "fizzbazzinput3.txt"
-file_output = "fizzbazzoutput3.txt"
+file_input = "fizzbuzzinput3.txt"
+file_output = "fizzbuzzoutput3.txt"
 file_writing = open (file_output, "w")
 with open (file_input,"r") as file_reading:
     for line in file_reading:
