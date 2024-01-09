@@ -24,7 +24,6 @@ text = fille_open.read()
 print(text[::-1])
 fille_open.close()
 #Банкомат видає суму максимально можливими купюрами
-#Банкомат видає суму максимально можливими купюрами
 a = [1000 for i in range(1,11)]
 b = [500 for i in range(1,11)]
 c = [200 for i in range(1,11)]
@@ -45,7 +44,46 @@ if 0<need_amount<=5000 and not need_amount%10:
 else:
     print("Нажаль введена сума не є кратною 10, або введено суму, що перевищує 5000 грн")
 #Банкомат видає суму дрібними, але не більше 10 штук кожної дрібної купюри
+
 #Продовжуємо писати практики з заняття.
 """Написати fizzbuzz для 20 комплектів по три числа, які записані в файл. 
 Читайте із файлу перший рядок з трьома числами, беріть із нього числа, рахуйте для них fizzbuzz, виводите, продовжуйте з наступним рядком і так до кінця файла."""
+file_input = "fizzbazzinput3.txt"
+file_reading = open (file_input,"r")
+for line in file_reading:
+    fizz, buzz, num = map(int, line.split(","))
+    for i in range(1, num + 1):
+        fizz_buzz = ""
+        if not i % fizz and not i % buzz:
+            fizz_buzz += "FB"
+        elif i % fizz == 0:
+            fizz_buzz += "F"
+        elif i % buzz == 0:
+            fizz_buzz += "B"
+        else:
+            fizz_buzz += str(i)
+        print(fizz_buzz, end = " ")
+    print()
+file_reading.close()
 #Переробити другу задачу так, щоб результат писався в інший файл. Додаємо list comprehension, map та інші свіжеотримані знання до виконання завдання.
+file_input = "fizzbazzinput3.txt"
+file_output = "fizzbazzoutput3.txt"
+file_writing = open (file_output, "w")
+with open (file_input,"r") as file_reading:
+    for line in file_reading:
+        fizz, buzz, num = map(int, line.split(","))
+        for i in range(1, num + 1):
+            fizz_buzz = ""
+            if not i % fizz and not i % buzz:
+                fizz_buzz += "FB"
+            elif i % fizz == 0:
+                fizz_buzz += "F"
+            elif i % buzz == 0:
+                fizz_buzz += "B"
+            else:
+                fizz_buzz += str(i)
+            print(fizz_buzz, end = " ")
+            file_writing.write(fizz_buzz + " ")
+        file_writing.write("\n")
+        print()
+file_writing.close()
