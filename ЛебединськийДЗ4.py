@@ -4,9 +4,6 @@ while need_apartment == 0 or need_apartment > 30:
     need_apartment = int(input("Введіть номер квартири до якої потрібно потрапити:"))
 else:
     floor_lst = [1,2,3,4,5]
-    apartment_lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-                11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-                21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
     entrance_lst = [1,2,3]
     number_apartment = need_apartment
     def information_apartment (number_apartment):
