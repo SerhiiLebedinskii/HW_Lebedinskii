@@ -1,24 +1,24 @@
 #Кожен пише суму списку за допомогою for та while.
 #1.1
 num = int(input("num:"))
-i=sum=0
+i=sum_num=0
 while i<= num:
-  sum += i
+  sum_num += i
   i +=1
-print (sum)
+print (sum_num)
 #1.2
 num = int(input("num:"))
-sum = 0
+sum_num = 0
 for i in range(1, num+1):
-    sum += i
-print(sum)
+    sum_num += i
+print(sum_num)
 #Написати програму, яка виводить сама себе
-file = "program.txt"
+file = "program3дз.txt"
 fille_open = open(file,'r')
 print(fille_open.read())
 fille_open.close()
 #Написати програму, яка виводить саму себе задом наперед
-file = "program.txt"
+file = "program3дз.txt"
 fille_open = open(file,'r')
 text = fille_open.read()
 print(text[::-1])
